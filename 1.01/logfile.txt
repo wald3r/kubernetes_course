@@ -1,0 +1,16 @@
+walder@station:~/Documents/kubernetes/1.01$ sudo kubectl create deployment randomstring --image=7317/randomstringgen
+deployment.apps/randomstring created
+
+walder@station:~/Documents/kubernetes/1.01$ sudo kubectl get deployments
+NAME           READY   UP-TO-DATE   AVAILABLE   AGE
+randomstring   0/1     1            0           12s
+
+walder@station:~/Documents/kubernetes/1.01$ sudo kubectl logs -f randomstring-859cb6d77-2xr4j
+1616322508755   9fw7f6
+1616322513766   bvnv0b
+1616322518767   98gi6w
+1616322523772   yj60la
+1616322528778   u65p4
+1616322533780   rkec9u
+1616322538786   r4ulu
+

@@ -1,0 +1,10 @@
+walder@station:~/Documents/kubernetes/1.02$ sudo kubectl create deployment webserver --image=7317/webserver
+deployment.apps/webserver created
+
+
+walder@station:~/Documents/kubernetes/1.02$ sudo kubectl get pods
+NAME                         READY   STATUS    RESTARTS   AGE
+webserver-6c4b965656-6rl7l   1/1     Running   0          2m58s
+walder@station:~/Documents/kubernetes/1.02$ sudo kubectl logs -f webserver-6c4b965656-6rl7l
+Server is running on Port 3001
+
