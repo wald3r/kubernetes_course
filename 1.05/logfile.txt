@@ -1,0 +1,15 @@
+walder@station:~/Documents/kubernetes/1.05$ sudo kubectl apply -f manifests/deployment.yaml
+deployment.apps/webserver created
+walder@station:~/Documents/kubernetes/1.05$ sudo kubectl get pods
+NAME                        READY   STATUS    RESTARTS   AGE
+webserver-54f477845-qzdg5   1/1     Running   0          37s
+walder@station:~/Documents/kubernetes/1.05$ sudo kubectl logs webserver-54f477845-qzdg5
+Server is running on Port 3000
+walder@station:~/Documents/kubernetes/1.05$ sudo kubectl port-forward webserver-54f477845-qzdg5 3003:3000
+Forwarding from 127.0.0.1:3003 -> 3000
+Forwarding from [::1]:3003 -> 3000
+Handling connection for 3003
+
+
+
+HTTP request worked too!
